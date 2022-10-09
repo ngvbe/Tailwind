@@ -1,231 +1,436 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thegymn clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="src/input.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
-<body >
-  <nav class="flex flex-row gap-6 justify-evenly mt-5">
-    <img src="/dist/images/logo.png" alt="" class="w-60 h-20">
-    <div class="flex flex-col">
-    <div class="flex flex-row gap-4 text-sm">
-      <p>Homepage</p>
-      <p>Index</p>
-      <p>Contact</p>
-      <p>Legal Notice</p>
-      <p>Data Protection Policy</p>
-      <p>Emergencies</p>
-      <p>Accessibility Statement</p>
-    </div>
-    <div class="flex flex-row gap-4 mt-3 ml-20 mb-5">
-      <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-black font-medium text-sm px-4 py-2.5 text-center inline-flex items-center border-2" type="button">
-       EN
-        <svg class="ml-2 w-4 h-4 text-green-600 font-bold" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
-        xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-        </path></svg>
-      </button>
-      <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-black font-medium text-sm px-4 py-2.5 text-center inline-flex items-center border-2" type="button">
-        QuickLinks
-         <svg class="ml-2 w-4 h-4 text-green-600 font-bold" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
-         xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-         </path></svg>
-       </button>
-       <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-black font-medium text-sm px-4 py-2.5 text-center inline-flex items-center border-2" type="button">
-        Information For
-         <svg class="ml-2 w-4 h-4 text-green-600 font-bold" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
-         xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-         </path></svg>
-       </button>
-       <div class="relative flex flex-row  border border-black">
-        <input type="text" placeholder="Search With Google TM..." class="w-56 text-sm">
-        <img src="/dist/images/search.jpg" class="absolute ml-40 w-fit h-5 mt-2">
-    </div>
-    </div>
-  </div>
-  </nav>
-  <div class="flex flex-col">
-    <div class="bg-slate-300 h-10 justify-start">
-      <h1 class="text-black mt-3 ml-4">FREIE UNIVESITAT BERLIN</h1>
-    </div>
-    <div class="bg-green-500 flex flex-row gap-8 h-10 text-white">
-      
-      <button class="ml-4">ABOUT</button>
-      <button>EDUCATION</button>
-      <button>RESEARCH</button>
-      <button>DEPARTMENTS</button>
-      <button>INTERNATIONAL</button>
-      <button>EXCELLENCE</button>
-      <button>STRATEGY</button>
-    </div>
-  </div>
-  <div class="justify-center mt-10 ml-10 mr-10 mb-10">
+
+<body>
+    <header class="space-x-8 bg-white border w-full h-24 flex">
+        <nav class="flex">
+            <div>
+                <img class="w-60 h-16 md:w-40 md:h-20" src="/dist/images/logo-kit.png" alt="">
+            </div>
+            <div class=" flex flex-col justify-center ml-96 mt-8">
+                <div class="hidden md:flex md:space-x-8 ">
+                    <div class="space-x-8 flex text-sm font-thin ml-10 ">
+                        <a class="hover:text-green-500" href="">Home</a>
+                        <a class="hover:text-green-500 " href="">Plain Language</a>
+                        <a class="hover:text-green-500" href="">Legals</a>
+                        <a class="hover:text-green-500" href="">Privacy Policy</a>
+                        <a class="hover:text-green-500" href="">Accessibility</a>
+                        <a class="hover:text-green-500" href="">Sitemap</a>
+                        <a class="hover:text-green-500" href="">Intanet</a>
+                        <div class="hover:text-green-500 flex space-x-2">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                                </svg>
+                            </div>
+                            <span>KIT</span>
+                        </div>
+                        <div class="hover:text-green-500 flex space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                            </svg>
+                            <span>DE</span>
+                        </div>
+                        <div class="hover:text-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex md:space-x-4 ml-96 text-sm mt-2">
+                    <a class="hover:text-green-500" href="">KIT</a>
+                    <a class="hover:text-green-500" href="">Topics</a>
+                    <a class="hover:text-green-500" href="">Studies</a>
+                    <a class="hover:text-green-500" href="">Reaserch</a>
+                    <a class="hover:text-green-500" href="">Innovation</a>
+                    <a class="hover:text-green-500" href="">Career</a>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--Moblie-->
+        <div class="md:hidden flex -m">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+        </div>
+    </header>
+    <main class="">
+        <section class="section_one pt-5">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide relative ">
+                        <img class="" src="https://www.kit.edu/img/header_dossier%20studium_1920p.jpg" alt="" srcset="">
+                        <div class="absolute left-0 px-12 py-11 top-0 w-full">
+                            <h1 class="text-white text-left">
+                                <a href="http://" class="">Studying at KIT</a>
+                            </h1>
+                            <p class="text-white mt-6 text-left"><a>Research-based learning between academic tradition
+                                    and cutting-edge research. Learn more.</a> </p>
+                            <div class="flex flex-wrap justify-between gap-5 buttons-wrapper text-left">
+                                <a class=" slider-buttons rounded-tr-xl rounded-bl-xl w-1/2 text-white text-xl font-extralight mt-6 "
+                                    href="/" title="Research-based Studies">
+                                    <h3>Research-based Studies</h3>
+                                    <p>To the dossier</p>
+                                </a>
+                                <a class=" slider-buttons rounded-tr-xl rounded-bl-xl w-1/2 text-white text-xl font-light mt-6"
+                                    href="/" title="Research-based Studies">
+                                    <h3>Research-based Studies</h3>
+                                    <p>To the dossier</p>
+                                </a>
+                                <a class=" slider-buttons rounded-tr-xl rounded-bl-xl w-1/2 text-white text-xl font-light mt-4"
+                                    href="/" title="Research-based Studies">
+                                    <h3>Research-based Studies</h3>
+                                    <p>To the dossier</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide relative slider-2">
+                        <img class="" src="https://www.kit.edu/img/header_klimaforschung-Afrika_schattiert.jpg" alt=""
+                            srcset="">
+                        <div class="absolute left-0 px-12 py-11 top-0 w-full">
+                            <h1 class="text-white text-left">
+                                <a href="http://" class="">Studying at KIT</a>
+                            </h1>
+                            <p class="text-white mt-6 text-left"><a>Research-based learning between academic tradition
+                                    and cutting-edge research. Learn more.</a> </p>
+                            <div class="flex flex-wrap justify-between gap-5 buttons-wrapper text-left">
+                                <a class=" slider-buttons rounded-tr-xl rounded-bl-xl w-1/2 text-white text-xl font-extralight mt-6 "
+                                    href="/" title="Research-based Studies">
+                                    <h3>Understanding the Meteorological Relationships </h3>
+                                    <p>To the topic highlight</p>
+                                </a>
+                                <a class=" slider-buttons rounded-tr-xl rounded-bl-xl w-1/2 text-white text-xl font-light mt-6"
+                                    href="/" title="Research-based Studies">
+                                    <h3>KIT international </h3>
+                                    <p>To the research magazine</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="bg-black flex black-section px-8 py-12">
+                <a class=" slider-buttons rounded-tr-xl 
+                rounded-bl-xl w-1/2 text-white text-xl font-extralight border-4 border-white
+                h-20 flex items-center pl-5" href="/" title="Research-based Studies">
+                    <p>To the topic highlight</p>
+                </a>
+                <a class=" slider-buttons rounded-tr-xl 
+                rounded-bl-xl w-1/2 text-white text-xl font-extralight border-4 border-white
+                h-20 flex items-center pl-5" href="/" title="Research-based Studies">
+                    <p>To the topic highlight</p>
+                </a>
+                <a class=" slider-buttons rounded-tr-xl 
+                rounded-bl-xl w-1/2 text-white text-xl font-extralight border-4 border-white
+                h-20 flex items-center pl-5" href="/" title="Research-based Studies">
+                    <p>To the topic highlight</p>
+                </a>
+            </div>
+        </section>
+        <section class="section_two px-8 pt-5">
+            <h1 class="">News</h1>
+            <div class="flex mt-8 gap-8">
+                <div class="w-3/12 single-news ">
+                    <img class="w-full" src="https://www.kit.edu/img/20221005-AB-01-003-teaser_rdax_1024x574_98s.jpg"
+                        alt="" srcset="">
+                    <h3 class="my-4">New Electrolysis Processes for Sustainable
+                        Chemical Production</h3>
+                    <p>In the future cluster ETOS, researchers are
+                        developing processes that save energy and resources in the chemical industry and reduce
+                        carbon dioxide emissions</p>
+                    <a class="link" href="">
+                        learn more
+                    </a>
+                </div>
+                <div class="w-3/12 single-news ">
+                    <img class="w-full"
+                        src="https://www.kit.edu/img/2022_087_Industrielle-Produktion-mit-KI_rdax_1024x576_98s.jpg"
+                        alt="" srcset="">
+                    <h3 class="my-4">New Electrolysis Processes for Sustainable
+                        Chemical Production</h3>
+                    <p>In the future cluster ETOS, researchers are
+                        developing processes that save energy and resources in the chemical industry and reduce
+                        carbon dioxide emissions</p>
+                    <a class="link" href="">
+                        learn more
+                    </a>
+                </div>
+                <div class="w-3/12 single-news ">
+                    <img class="w-full"
+                        src="https://www.kit.edu/img/2022_085_Forschungsgruppe-SECUSO-erhaelt-Bundespreis-Verbraucherschutz_rdax_1024x576_98s.jpg"
+                        alt="" srcset="">
+                    <h3 class="my-4">New Electrolysis Processes for Sustainable
+                        Chemical Production</h3>
+                    <p>In the future cluster ETOS, researchers are
+                        developing processes that save energy and resources in the chemical industry and reduce
+                        carbon dioxide emissions</p>
+                    <a class="link" href="">
+                        learn more
+                    </a>
+                </div>
+                <div class="w-3/12 single-news ">
+                    <img class="w-full" src="https://www.kit.edu/img/20221005-AB-01-003-teaser_rdax_1024x574_98s.jpg"
+                        alt="" srcset="">
+                    <h3 class="my-4">New Electrolysis Processes for Sustainable
+                        Chemical Production</h3>
+                    <p>In the future cluster ETOS, researchers are
+                        developing processes that save energy and resources in the chemical industry and reduce
+                        carbon dioxide emissions</p>
+                    <a class="link" href="">
+                        learn more
+                    </a>
+                </div>
+
+            </div>
+            <div class="flex flex-col md:flex-row mt-20 gap-8 three-column-section">
+                <div class="w-4/12 h-96 px-10 relative py-10 single-news rounded-tr-xl rounded-bl-xl flex flex-col justify-between"
+                    style="background-image: url('https://www.kit.edu/img/Corona-KeyVisual_MaskeAbstand_quadrat.jpg');">
+                    <div class="overlay absolute w-full h-full top-0 left-0 bg-black opacity-60 z-0"></div>
+                    <h3 class="my-4 z-10">FAQ on the Coronavirus</h3>
+
+                    <div class="z-10">
+                        <p>Updated questions and answers relating to the Coronavirus. Last Update: Contact to a
+                            positively tested Person (As of October 6, 2022)</p>
+                        <a class="link" href="">
+                            learn more
+                        </a>
+                    </div>
+
+                </div>
+                <div class="w-4/12 h-96 relative px-10 py-10 single-news rounded-tr-xl rounded-bl-xl flex flex-col justify-between"
+                    style="background-image: url('https://www.kit.edu/img/studieren-20110107-CS-03-173_rdax_1230x769s.jpg');">
+
+                    <h3 class="my-4 z-10">FAQ on the Coronavirus</h3>
+
+                    <div class="z-10">
+                        <p>Updated questions and answers relating to the Coronavirus. Last Update: Contact to a
+                            positively tested Person (As of October 6, 2022)</p>
+                        <a class="link" href="">
+                            learn more
+                        </a>
+                    </div>
+                    <div class="overlay absolute w-full h-full top-0 left-0 bg-black opacity-60 z-0"></div>
+
+                </div>
+                <div class="w-4/12 h-96 relative px-10 py-10 single-news rounded-tr-xl rounded-bl-xl flex flex-col justify-between"
+                    style="background-image: url('https://www.kit.edu/img/studierende-20220601-MH-01-144_rdax_1230x820s.jpg');">
+                    <div class="overlay absolute w-full h-full top-0 left-0 bg-black opacity-60 z-0"></div>
+                    <h3 class="my-4 z-10">FAQ on the Coronavirus</h3>
+
+                    <div class="z-10">
+                        <p>Updated questions and answers relating to the Coronavirus. Last Update: Contact to a
+                            positively tested Person (As of October 6, 2022)</p>
+                        <a class="link" href="">
+                            learn more
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row mt-3 gap-8 two-column-section relative">
+                <a class=" slider-buttons rounded-tr-xl rounded-bl-xl w-1/2 text-white text-xl 
+                font-extralight mt-6 p-9" href="/" title="Research-based Studies">
+                    <h3>Excellence</h3>
+                    <p>
+                        As a University of Excellence, KIT strengthens excellent research, maintains intensive dialog
+                        with society, and offers reliable career paths.
+                    </p>
+                </a>
+                <a class=" slider-buttons rounded-tr-xl rounded-bl-xl w-1/2 text-white text-xl 
+                font-extralight mt-6 p-9" href="/" title="Research-based Studies">
+                    <h3>Research University in the Helmholtz Association</h3>
+                    <p>
+                        KIT is the only German university of excellence that combines a long university tradition with
+                        large-scale national research.
+                    </p>
+                </a>
+            </div>
+        </section>
+        <section class="section_three px-8 pt-5">
+            <h1 class="">Events</h1>
+            <div class="flex justify-end uppercase text-sm calender-container">
+                <a class="link-more" href="/kit/english/calendar-of-events.php">to event calendar</a>
+            </div>
+            <div class="flex mt-8">
+                <div class=" w-1/2 ">
+                    <img src="https://www.kit.edu/admin/events/images/ajax/image.php?ev_id=36182&format=widget" alt=""
+                        srcset="" class="w-full">
+                    <div>
+                        <a tabindex="-1" href="/" title="2022-10-10: Kunst Kurz und Knapp">
+                            <h4 class="h4 my-5">Kunst Kurz und Knapp</h4>
+                            <span class="time mt-3 w-full block">2022-10-10 12:00 - 12:15</span>
+                            <span class="place  block">KIT, Campus Süd
+                                Engler-Bunte-Institut
+                                südl. Außenbereich, Geb.40.11, 40.12
+                                76131 Karlsruhe</span>
+                            <div class="description">Kunstführung zur Arbeit von Charlotte Sommer-Landgraf, Vereinigung,
+                                1992<br>
+
+                                Dauer: 10-15 Minuten<br>
+
+                                Die Teilnehmerzahl ist begrenzt, deshalb ist eine Anmeldung unter kunst@kit.edu dringend
+                                erforderlich.&nbsp;<br>
+                            </div>
+                            <p></p>
+                        </a>
+                    </div>
+                    <div class="flex flex-col">
+                        <div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="">
+
+    </footer>
+    <section class="seven">
+        <div>
+            <h1>Visiting</h1>
+            hr
+            <ul>
+                <li>How To reach the KIT</li>
+                <li>Campus Map</li>
+                <li>Events</li>
+                <li>KIT-Shop <i></i></li>
+            </ul>
+        </div>
+        <div>
+            <h1>Applying</h1>
+            hr
+            <ul>
+                <li>Jobs</li>
+                <li>Study Courses</li>
+                <li>Trainee Position <i></i></li>
+                <li>KIT-Shop <i></i></li>
+            </ul>
+        </div>
+        <div>
+            <h1>Media</h1>
+            <hr>
+            <ul>
+                <li>Press Releases</li>
+                <li>Contact for the Media</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Contact</h1>
+            <hr>
+            <ul>
+                <li>Karlsruhe Institute of Technology</li>
+                <li>Phone: +49 721 608-0</li>
+                <li>Fax: +49 721 608-44290</li>
+                <li>Email: <span> info∂kit edu</span></li>
+                <li><span>Staff Search</span></li>
+                <li><span>Address</span></li>
+            </ul>
+            <hr>
+            <ul>
+                <li><img src="images/instagram.png" alt=""></li>
+                <li><img src="images/facebook-app-symbol.png" alt=""></li>
+                <li><img src="images/twitter.png" alt=""></li>
+                <li><img src="images/youtube.png" alt=""></li>
+                <li><img src="images/wifi.png" alt=""></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer">
+        <h1>KIT – The Research University in the Helmholtz Association</h1>
+        <ul>
+            <li>
+    Home
+            </li>
+            <li>
+                Plain Language
+            </li>
+            <li>
+                Legals
+            </li>
+            <li>
+                Privacy Policy
+            </li>
+            <li>
+                Accessibility
+            </li>
+            <li>
+                Sitemap
+            </li>
+            <li>
+                Intranet
+            </li>
+            <li>
+    <i></i>KIT
+            </li>
     
-<div id="default-carousel" class="relative" data-carousel="static">
-  <!-- Carousel wrapper -->
-  <div class="relative h-56 overflow-hidden md:h-96">
-       <!-- Item 1 -->
-      <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="">
-          <span class="absolute text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-          <img src="/dist/images/students.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 2 -->
-      <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
-          <img src="/dist/images/canvas.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 3 -->
-      <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
-          <img src="/dist/images/challenge.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
-        <img src="/dist/images/man.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-    </div>
-    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
-      <img src="/dist/images/yellow.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-  </div>
-  </div>
-  <a href="#" class="absolute mb-10  z-30 space-x-3 -translate-x-1/2 bottom-5 ml-60 block p-6 max-w-sm border-0 shadow-md  dark:bg-black ">
-    <h5 class="mb-2 text-xl font-bold tracking-tight text-white dark:text-white hover:underline">Scholarship available - Apply Now!</h5>
-    <p class="font-normal text-white dark:text-white hover:underline">Student at Freie Universitat with a strong academic record are invited to apply for a Deutschlandstipendium scholarship. Applying is easy - do it in just four steps!</p>
-    <p class="font-normal text-white dark:text-white text-sm mt-10">Image Credit: Patricia Kalisch</p>
-  </a>
-</div>
-  </div>
-  <div class="bg-gray-300 flex flex-row text-blue-700 hover:text-slate-600 h-20">
-    <button type="button" class="top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
-      <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-blue-600 dark:bg-blue-500 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-      </span>
-  </button>
-  <p class="mt-6 text-2xl">CoronaVirus pandemic: Current information for university Members</p>
-  </div>
-  <div class="bg-blue-300">
-    <div class="flex flex-row gap-3">
-    <div class="box-border bg-blue-700 w-40 mt-5">
-      <p class="text-blue-700">p</p>
-    </div>
-    <p class="text-xl text-black mt-5">University News</p>
-  </div>
-  <div class="grid md:grid-cols-3 grid-cols-1 mt-5 ml-10 mr-10">
-    <div class="max-w-sm bg-white border shadow-md dark:bg-white">
-      <a href="#">
-          <img class="" src="/dist/images/woman.jpg" alt="" />
-      </a>
-      <div class="p-5">
-          <a href="#">
-              <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-blue-500">Art Historian Julian Noth Receives ERC Consolidator Grant:
-                European Research Council to provide nearly two million euros in funding for research project at Freie Universitat
-              </p>
-          </a>
-          <p class="mt-5 font-normal text-gray-700 dark:text-gray-400">Press release</p>
-      </div>
-  </div>
+    </footer>
 
-  <div class="max-w-sm bg-white border  shadow-md dark:bg-white">
-    <a href="#">
-        <img class="" src="/dist/images/indian.jpg" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-blue-500">Sutapa Chakrabarti conducts research on the degradation of mRNA in cells: "The more we investigate, the more
-               complicated it gets"</p>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Featured Stories</p>
-        
-    </div>
-</div>
 
-<div class="max-w-sm bg-white border  shadow-md dark:bg-white">
-  <a href="#">
-      <img class="" src="/dist/images/cloud.jpg" alt="" />
-  </a>
-  <div class="p-5">
-      <a href="#">
-          <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-blue-500">The new Queer@FU network will serve as a space where queer employees at Freie Universitat can meet Informally and support each other - Launch party at 5:00 p.m on September 21, 2022</p>
-      </a>
-      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Featured Stories</p>
-      
-  </div>
-</div>
-  </div>
-  <div class="grid md:grid-cols-4 grid-cols-1 mt-5 ml-10 mr-10 gap-6">
+    
 
-    <div class="max-w-sm bg-white border shadow-md dark:bg-white">
-      <a href="#">
-          <img class="" src="/dist/images/cup.jpg" alt="" />
-      </a>
-      <div class="p-5">
-          <a href="#">
-              <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-blue-500">Art Historian Julian Noth Receives ERC Consolidator Grant:
-                European Research Council to provide nearly two million euros in funding for research project at Freie Universitat
-              </p>
-          </a>
-          <p class="mt-5 font-normal text-gray-700 dark:text-gray-400">Press release</p>
-      </div>
-  </div>
-
-  <div class="max-w-sm bg-white border  shadow-md dark:bg-white">
-    <a href="#">
-        <img class="" src="/dist/images/bee.jpg" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-blue-500">Sutapa Chakrabarti conducts research on the degradation of mRNA in cells: "The more we investigate, the more
-               complicated it gets"</p>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Featured Stories</p>
-        
-    </div>
-</div>
-
-<div class="max-w-sm bg-white border  shadow-md dark:bg-white">
-  <a href="#">
-      <img class="" src="/dist/images/art.jpg" alt="" />
-  </a>
-  <div class="p-5">
-      <a href="#">
-          <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-blue-500">The new Queer@FU network will serve as a space where queer employees at Freie Universitat can meet Informally and support each other - Launch party at 5:00 p.m on September 21, 2022</p>
-      </a>
-      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Featured Stories</p>
-      
-  </div>
-</div>
-
-  <div class="max-w-sm bg-white border  shadow-md dark:bg-white">
-    <a href="#">
-        <img class="" src="/dist/images/mosquito.jpg" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <p class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-blue-500">The new Queer@FU network will serve as a space where queer employees at Freie Universitat can meet Informally and support each other - Launch party at 5:00 p.m on September 21, 2022</p>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Featured Stories</p>
-        
-    </div>
-  </div>
-</div>
-<div class="flex flex-row justify-start gap-6">
-  <div class="flex flex-row text-blue-700 hover:text-slate-600 h-20 ml-10 mr-10">
-    <button type="button" class="top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
-      <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-blue-600 dark:bg-blue-500 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-      </span>
-  </button>
-  <p class="mt-6 text-2xl">Press release in English</p>
-  </div>
-
-  <div class="flex flex-row text-blue-700 hover:text-slate-600 h-20 ml-32">
-    <button type="button" class="top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
-      <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-blue-600 dark:bg-blue-500 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-      </span>
-  </button>
-  <p class="mt-6 text-2xl">Featured stories about Freie Universitat Berlin</p>
-  </div>
-</div>
-  </div>
-  <div class="bg-white">
-<p>Studying at Freie Universitat</p>
-  </div>
+    
+   
 </body>
+
 </html>
