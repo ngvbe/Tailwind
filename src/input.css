@@ -57,7 +57,20 @@ h1{
     font-size: 2.35em;
     background-image: none;
 }
-
+.swiper-slide a{
+    font-weight: 300;
+}
+.swiper-slide div>p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.swiper-slide div a h3{
+    font-size: 1.8rem;
+    font-weight:200;
+}
+.swiper-slide div a>p{
+    font-weight: 200;
+}
 .nav-container {
     height: 7.5625rem;
     background-color: white;
@@ -65,7 +78,9 @@ h1{
 .light-gray-color{
     color: rgba(0,135,108,0.9);
 }
-
+.buttons-wrapper a:hover h3, .buttons-wrapper a:hover p{
+    text-decoration: underline;
+}
 .section_one h1{
     font-size: 5rem;
 }
@@ -148,10 +163,10 @@ h1{
 }
 
 
-.section_two>h1{
+.section_two>h1, .section_three>h1{
     font-size: 2.925rem;
     line-height: 1.18;
-    font-weight: 700;
+    font-weight: 500;
     color: #404040;
 }
 .section_two>h1:after{
@@ -206,10 +221,160 @@ h1{
     background-color: #00876c;
     color:white;
     padding: 0.625rem 0.9375rem;
+    text-decoration: underline;
 }
 
 
 
 .three-column-section .single-news a:hover{
     background-color: #007755;
+}
+
+
+.two-column-section a{
+    background-color: #00876c;
+    height:fit-content;
+}
+
+.two-column-section a h3{
+    font-size: 1.785rem;
+    line-height: 1.2;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.two-column-section a p{
+    font-size: 1.785rem;
+    font-weight: 200;
+    line-height: 1.2;
+}
+
+
+
+
+.section_three div div img{
+    height: 387px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.section_three div div a{
+    color: #404040;
+}
+
+.section_three div div a:hover{
+    color: #00876c;
+}
+.section_three div div a h4{
+    font-size: 1.575rem;
+    line-height: 1.2;
+    color: inherit;
+}
+.section_three div div a h4:hover{
+    color: inherit;
+}
+
+.section_three div div a span{
+    color: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    
+}
+.section_three div div a h4:hover{
+    color: inherit;
+}
+.section_three div div a .description{
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.calender-container a{
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #00876c;
+}
+.calender-container a:after{
+    content: "";
+    display: inline-block;
+    margin-left: 0.625rem;
+    font-family: "kit-icons";
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.section_three  .col-1:hover img{
+    transform: scale(1.008);
+    transition-property: transform, -webkit-transform;
+    transition-duration: 0.3s, 0.3s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+}
+.section_three  .col-1:hover a{
+    color: #00876c;
+}
+
+.stat-row div:first-of-type{
+    color: #404040;
+    background-color: #d9d9d9;
+    border-left: 4px solid #02876b;
+    font-weight: 700;
+}
+.stat-row:hover div:first-of-type{
+    color: #fff;
+    background-color:#02876b;
+    cursor: pointer;
+    
+}
+.stat-row .col-right{
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+.col-right h5{
+    font-size: 1.25rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #404040;
+
+}
+.col-right p{
+    color: #404040;
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .two-column-section a h3{
+        font-size: 1.085rem;
+       
+    }
+    .two-column-section a p{
+        font-size: 1.085rem;
+        font-weight: 200;
+        line-height: 1.2;
+    }
+    .section_three div div img{
+        height: 230px;
+    }
+    .section_three div div a h4{
+        font-size: 1.085rem;
+        font-weight: 700;
+    }
+    .section_two>h1, .section_three>h1{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .section_three div div a span{
+        font-size: 0.985rem;
+        font-weight: 500;
+    }
+    .section_three .description{
+        font-size: 0.885rem;
+        font-weight: 300;
+    }
+    .stat-row div:first-of-type{
+        font-size: 1rem;
+    }
 }

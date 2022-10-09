@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>thegymn clone</title>
+    <title>KIT-University</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="src/input.css">
@@ -17,16 +17,16 @@
 </head>
 
 <body>
-    <header class="space-x-8 bg-white border w-full h-24 flex">
+    <header class="bg-white border w-full h-24 flex">
         <nav class="flex">
-            <div>
-                <img class="w-60 h-16 md:w-40 md:h-20" src="/dist/images/logo-kit.png" alt="">
+            <div class=" ">
+                <img class="md:mt-6 md:ml-8 mt-2 md:w-24 md:h-12" src="./dist/images/logo-kit.png" alt="">
             </div>
-            <div class=" flex flex-col justify-center ml-96 mt-8">
+            <div class="flex flex-col justify-center ml-96  mt-8">
                 <div class="hidden md:flex md:space-x-8 ">
                     <div class="space-x-8 flex text-sm font-thin ml-10 ">
                         <a class="hover:text-green-500" href="">Home</a>
-                        <a class="hover:text-green-500 " href="">Plain Language</a>
+                        <a class="hover:text-green-500" href="">Plain Language</a>
                         <a class="hover:text-green-500" href="">Legals</a>
                         <a class="hover:text-green-500" href="">Privacy Policy</a>
                         <a class="hover:text-green-500" href="">Accessibility</a>
@@ -59,6 +59,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="hidden md:flex md:space-x-4 ml-96 text-sm mt-2">
                     <a class="hover:text-green-500" href="">KIT</a>
                     <a class="hover:text-green-500" href="">Topics</a>
@@ -66,7 +67,7 @@
                     <a class="hover:text-green-500" href="">Reaserch</a>
                     <a class="hover:text-green-500" href="">Innovation</a>
                     <a class="hover:text-green-500" href="">Career</a>
-                    <div>
+                    <div class="hover:text-green-500">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -102,7 +103,7 @@
         </div>
     </header>
     <main class="">
-        <section class="section_one pt-5">
+        <section class="section_one">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide relative ">
@@ -121,13 +122,13 @@
                                 </a>
                                 <a class=" slider-buttons rounded-tr-xl rounded-bl-xl w-1/2 text-white text-xl font-light mt-6"
                                     href="/" title="Research-based Studies">
-                                    <h3>Research-based Studies</h3>
-                                    <p>To the dossier</p>
+                                    <h3>Degree Programs</h3>
+                                    <p>Choose among more than 100 degree programs.</p>
                                 </a>
                                 <a class=" slider-buttons rounded-tr-xl rounded-bl-xl w-1/2 text-white text-xl font-light mt-4"
                                     href="/" title="Research-based Studies">
-                                    <h3>Research-based Studies</h3>
-                                    <p>To the dossier</p>
+                                    <h3>Application</h3>
+                                    <p>Deadlines, procedures and application portal.</p>
                                 </a>
                             </div>
                         </div>
@@ -161,7 +162,7 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
-            <div class="bg-black flex black-section px-8 py-12">
+            <div class="bg-black flex black-section px-6 md:px-8 py-12">
                 <a class=" slider-buttons rounded-tr-xl 
                 rounded-bl-xl w-1/2 text-white text-xl font-extralight border-4 border-white
                 h-20 flex items-center pl-5" href="/" title="Research-based Studies">
@@ -177,12 +178,16 @@
                 h-20 flex items-center pl-5" href="/" title="Research-based Studies">
                     <p>To the topic highlight</p>
                 </a>
+                <!-- <form action="/english/search.php">
+                    <input type="search" placeholder="search" id="target-groups-search" name="searchquery" aria-label="search">
+                    <button id="target-group-submit" aria-label="search"></button>
+                </form> -->
             </div>
         </section>
-        <section class="section_two px-8 pt-5">
+        <section class="section_two px-6 md:px-8">
             <h1 class="">News</h1>
-            <div class="flex mt-8 gap-8">
-                <div class="w-3/12 single-news ">
+            <div class="flex flex-col md:flex-row mt-8 gap-8">
+                <div class="md:w-3/12 single-news ">
                     <img class="w-full" src="https://www.kit.edu/img/20221005-AB-01-003-teaser_rdax_1024x574_98s.jpg"
                         alt="" srcset="">
                     <h3 class="my-4">New Electrolysis Processes for Sustainable
@@ -194,7 +199,7 @@
                         learn more
                     </a>
                 </div>
-                <div class="w-3/12 single-news ">
+                <div class="md:w-3/12 single-news ">
                     <img class="w-full"
                         src="https://www.kit.edu/img/2022_087_Industrielle-Produktion-mit-KI_rdax_1024x576_98s.jpg"
                         alt="" srcset="">
@@ -207,7 +212,7 @@
                         learn more
                     </a>
                 </div>
-                <div class="w-3/12 single-news ">
+                <div class="md:w-3/12 single-news ">
                     <img class="w-full"
                         src="https://www.kit.edu/img/2022_085_Forschungsgruppe-SECUSO-erhaelt-Bundespreis-Verbraucherschutz_rdax_1024x576_98s.jpg"
                         alt="" srcset="">
@@ -220,7 +225,7 @@
                         learn more
                     </a>
                 </div>
-                <div class="w-3/12 single-news ">
+                <div class="md:w-3/12 single-news ">
                     <img class="w-full" src="https://www.kit.edu/img/20221005-AB-01-003-teaser_rdax_1024x574_98s.jpg"
                         alt="" srcset="">
                     <h3 class="my-4">New Electrolysis Processes for Sustainable
@@ -235,7 +240,7 @@
 
             </div>
             <div class="flex flex-col md:flex-row mt-20 gap-8 three-column-section">
-                <div class="w-4/12 h-96 px-10 relative py-10 single-news rounded-tr-xl rounded-bl-xl flex flex-col justify-between"
+                <div class="md:w-4/12 h-96 px-10 relative py-10 single-news rounded-tr-xl rounded-bl-xl flex flex-col justify-between"
                     style="background-image: url('https://www.kit.edu/img/Corona-KeyVisual_MaskeAbstand_quadrat.jpg');">
                     <div class="overlay absolute w-full h-full top-0 left-0 bg-black opacity-60 z-0"></div>
                     <h3 class="my-4 z-10">FAQ on the Coronavirus</h3>
@@ -249,7 +254,7 @@
                     </div>
 
                 </div>
-                <div class="w-4/12 h-96 relative px-10 py-10 single-news rounded-tr-xl rounded-bl-xl flex flex-col justify-between"
+                <div class="md:w-4/12 h-96 relative px-10 py-10 single-news rounded-tr-xl rounded-bl-xl flex flex-col justify-between"
                     style="background-image: url('https://www.kit.edu/img/studieren-20110107-CS-03-173_rdax_1230x769s.jpg');">
 
                     <h3 class="my-4 z-10">FAQ on the Coronavirus</h3>
@@ -264,7 +269,7 @@
                     <div class="overlay absolute w-full h-full top-0 left-0 bg-black opacity-60 z-0"></div>
 
                 </div>
-                <div class="w-4/12 h-96 relative px-10 py-10 single-news rounded-tr-xl rounded-bl-xl flex flex-col justify-between"
+                <div class="md:w-4/12 h-96 relative px-10 py-10 single-news rounded-tr-xl rounded-bl-xl flex flex-col justify-between"
                     style="background-image: url('https://www.kit.edu/img/studierende-20220601-MH-01-144_rdax_1230x820s.jpg');">
                     <div class="overlay absolute w-full h-full top-0 left-0 bg-black opacity-60 z-0"></div>
                     <h3 class="my-4 z-10">FAQ on the Coronavirus</h3>
@@ -281,31 +286,31 @@
             </div>
 
             <div class="flex flex-col md:flex-row mt-3 gap-8 two-column-section relative">
-                <a class=" slider-buttons rounded-tr-xl rounded-bl-xl w-1/2 text-white text-xl 
-                font-extralight mt-6 p-9" href="/" title="Research-based Studies">
+                <a class=" slider-buttons rounded-tr-xl rounded-bl-xl md:w-1/2 text-white md:text-xl 
+                font-extralight mt-6 p-5 md:p-9" href="/" title="Research-based Studies">
                     <h3>Excellence</h3>
                     <p>
                         As a University of Excellence, KIT strengthens excellent research, maintains intensive dialog
                         with society, and offers reliable career paths.
                     </p>
                 </a>
-                <a class=" slider-buttons rounded-tr-xl rounded-bl-xl w-1/2 text-white text-xl 
-                font-extralight mt-6 p-9" href="/" title="Research-based Studies">
+                <a class=" slider-buttons rounded-tr-xl rounded-bl-xl md:w-1/2 text-white md:text-xl 
+                font-extralight mt-6 p-5 md:p-9" href="/" title="Research-based Studies">
                     <h3>Research University in the Helmholtz Association</h3>
-                    <p>
+                    <p class="text-xs md:text-xl">
                         KIT is the only German university of excellence that combines a long university tradition with
                         large-scale national research.
                     </p>
                 </a>
             </div>
         </section>
-        <section class="section_three px-8 pt-5">
+        <section class="section_three px-6 md:px-8 pt-5">
             <h1 class="">Events</h1>
-            <div class="flex justify-end uppercase text-sm calender-container">
+            <div class="flex justify-end uppercase text-sm calender-container hidden md:flex">
                 <a class="link-more" href="/kit/english/calendar-of-events.php">to event calendar</a>
             </div>
-            <div class="flex mt-8">
-                <div class=" w-1/2 ">
+            <div class="flex flex-col md:flex-row mt-8 gap-8">
+                <div class=" col-1 md:w-1/2 ">
                     <img src="https://www.kit.edu/admin/events/images/ajax/image.php?ev_id=36182&format=widget" alt=""
                         srcset="" class="w-full">
                     <div>
@@ -327,103 +332,142 @@
                             <p></p>
                         </a>
                     </div>
-                    <div class="flex flex-col">
-                        <div>
-                            
+                    
+                </div>
+                <div class="flex justify-end uppercase text-sm calender-container md:hidden">
+                    <a class="link-more" href="/kit/english/calendar-of-events.php">to event calendar</a>
+                </div>
+                <div class="flex flex-col md:w-1/2">
+                    <div class="flex stat-row gap-4">
+                        <div class="w-3/12 flex justify-center items-center">
+                            10/10<br/>
+                            2022
+                        </div>
+                        <div class="w-9/12 col-right">
+                            <h5>Kunst Kurz und Knapp</h5>
+                            <p>Kunstführung zur Arbeit von Charlotte Sommer-Landgraf, Vereinigung, 1992 nd erforderlich. </p>
                         </div>
                     </div>
+                    <div class="flex stat-row gap-4 mt-5">
+                        <div class="w-3/12 flex justify-center items-center">
+                            10/10<br/>
+                            2022
+                        </div>
+                        <div class="w-9/12 col-right">
+                            <h5>Kunst Kurz und Knapp</h5>
+                            <p>Kunstführung zur Arbeit von Charlotte Sommer-Landgraf, Vereinigung, dringend erforderlich. </p>
+                        </div>
+                    </div>
+                    <div class="flex stat-row gap-4 mt-5">
+                        <div class="w-3/12 flex justify-center items-center">
+                            10/10<br/>
+                            2022
+                        </div>
+                        <div class="w-9/12 col-right">
+                            <h5>Kunst Kurz und Knapp</h5>
+                            <p>Kunstführung zur Arbeit von Charlotte Sommer-Landgraf, nd erforderlich. </p>
+                        </div>
+                    </div>
+                    <div class="flex stat-row gap-4 mt-5">
+                        <div class="w-3/12 flex justify-center items-center">
+                            10/10<br/>
+                            2022
+                        </div>
+                        <div class="w-9/12 col-right">
+                            <h5>Kunst Kurz und Knapp</h5>
+                            <p>Kunstführung zur Arbeit von Charlotte Sommer-Landgraf, nd erforderlich. </p>
+                        </div>
+                    </div>
+                    <div class="flex stat-row gap-4 mt-5">
+                        <div class="w-3/12 flex justify-center items-center">
+                            10/10<br/>
+                            2022
+                        </div>
+                        <div class="w-9/12 col-right">
+                            <h5>Kunst Kurz und Knapp</h5>
+                            <p>Kunstführung zur Arbeit von Charlottdringend erforderlich. </p>
+                        </div>
+                    </div>
+                    <div class="flex stat-row gap-4 mt-5">
+                        <div class="w-3/12 flex justify-center items-center">
+                            10/10<br/>
+                            2022
+                        </div>
+                        <div class="w-9/12 col-right">
+                            <h5>Kunst Kurz und Knapp</h5>
+                            <p>Kunstführung zur Arbeit st begrenzt, deshalb ist eine Anmeldung unter kunst@kit.edu dringend erforderlich. </p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
     </main>
-    <footer class="">
-
-    </footer>
-    <section class="seven">
-        <div>
-            <h1>Visiting</h1>
-            hr
-            <ul>
-                <li>How To reach the KIT</li>
-                <li>Campus Map</li>
-                <li>Events</li>
-                <li>KIT-Shop <i></i></li>
-            </ul>
-        </div>
-        <div>
-            <h1>Applying</h1>
-            hr
-            <ul>
-                <li>Jobs</li>
-                <li>Study Courses</li>
-                <li>Trainee Position <i></i></li>
-                <li>KIT-Shop <i></i></li>
-            </ul>
-        </div>
-        <div>
-            <h1>Media</h1>
-            <hr>
-            <ul>
-                <li>Press Releases</li>
-                <li>Contact for the Media</li>
-            </ul>
-        </div>
-        <div>
-            <h1>Contact</h1>
-            <hr>
-            <ul>
-                <li>Karlsruhe Institute of Technology</li>
-                <li>Phone: +49 721 608-0</li>
-                <li>Fax: +49 721 608-44290</li>
-                <li>Email: <span> info∂kit edu</span></li>
-                <li><span>Staff Search</span></li>
-                <li><span>Address</span></li>
-            </ul>
-            <hr>
-            <ul>
-                <li><img src="images/instagram.png" alt=""></li>
-                <li><img src="images/facebook-app-symbol.png" alt=""></li>
-                <li><img src="images/twitter.png" alt=""></li>
-                <li><img src="images/youtube.png" alt=""></li>
-                <li><img src="images/wifi.png" alt=""></li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-    </section>
-    <footer class="footer">
-        <h1>KIT – The Research University in the Helmholtz Association</h1>
-        <ul>
-            <li>
-    Home
-            </li>
-            <li>
-                Plain Language
-            </li>
-            <li>
-                Legals
-            </li>
-            <li>
-                Privacy Policy
-            </li>
-            <li>
-                Accessibility
-            </li>
-            <li>
-                Sitemap
-            </li>
-            <li>
-                Intranet
-            </li>
-            <li>
-    <i></i>KIT
-            </li>
     
+    <footer class="bg-gray-400">
+        <div class=" flex space-x-8 ml-10">
+            <div>
+                <div>
+                    <h5>Visiting</h5>
+                </div>
+                
+                <p>How to reach the KIT</p>
+                <p>Campus Map</p>
+                <p>Events</p>
+                <p>KIT-Shop</p>
+            </div>
+            <div>
+                <div>
+                    <h5>Applying</h5>
+                </div>
+                
+                <p>How to reach the KIT</p>
+                <p>Campus Map</p>
+                <p>Events</p>
+                <p>KIT-Shop</p>
+            </div>
+            <div>
+                <div>
+                    <h5>Visiting</h5>
+                </div>
+                
+                <p>How to reach the KIT</p>
+                <p>Campus Map</p>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <h5>Contact</h5>
+                    </div>
+                    
+                    <p>Karlsruhe Institute of Technology</p>
+                    <p>Phone: +49 721 608-0</p>
+                    <p>Fax: +49 721 608-44290</p>
+                    <p>Email: <span>info∂kit edu</span></p>
+                    <p>Staff Search</p>
+                    <p>Address</p>
+                </div>
+              
+                <div class="flex space-x-4">
+                    <div class="border">
+                        <img class="w-8 h-8" src="./dist/images/instagram.png" alt="">
+                    </div>
+                    <div>
+                        <img class="w-8 h-8" src="./dist/images/facebook.png" alt="">
+                    </div>
+                    <div>
+                        <img class="w-8 h-8" src="./dist/images/twitter.png" alt="">
+                    </div>
+                    <div>
+                        <img class="w-8 h-8" src="./dist/images/youtube.png" alt="">
+                    </div>
+                    <div>
+                        <img class="w-8 h-8" src="./dist/images/wifi.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
 
